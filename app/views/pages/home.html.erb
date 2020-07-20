@@ -1,2 +1,63 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-infos p-3">
+  <%= cl_image_tag("jprevost_q2yf9t.jpg", secure: true, alt: "Avatar de Jules Prévost, développeur web full-stack (Ruby on Rails)", class: "avatar-square mb-2") %>
+  <h1>Jules Prévost</h1>
+  <h2>Développeur web full-stack freelance, Ruby on Rails</h2>
+  <p><i class="fas fa-map-marker-alt mr-1"></i>Bordeaux, Paris, distanciel</p>
+  <div class="social-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+  </div>
+  <div class="d-flex">
+  <%= link_to "Contact", root_path, class: "btn btn-primary m-2" %>
+  <%= link_to "Portfolio", root_path, class: "btn btn-primary m-2" %>
+  </div>
+</div>
+
+<div class="div-classic p-3">
+  <h2>Présentation</h2>
+  <p>
+    Développeur freelance spécialisé Ruby on Rails
+    et Javascript, je vous accompagne dans vos projets web.
+    <span>Mes missions : vous conseiller sur les outils les plus adaptés à vos besoins et à votre budget avant de les mettre en place techniquement.</span>
+  </p>
+
+  <p>
+    Egalement journaliste indépendant (Le Figaro Magazine, Le Monde, La Vie, GEO, La Gazette des communes…),
+    j'ai des compétences en rédaction et une bonne connaissance de la façon dont les internautes consultent des contenus web.
+  </p>
+</div>
+
+<div class="div-keppel p-3">
+  <h2>Mes services</h2>
+  <h3>Du back et de l'intégration front</h3>
+  <ol>
+    <li>Analyse de vos besoins et choix des outils à déployer</li>
+    <li>Création du parcours utilisateur</li>
+    <li>Conception d’un schéma de base de données cohérent ou mise en place d’un CMS (wordpress)</li>
+    <li>Développement du site : création de base de données, mise en place de fonctionnalités (mailing, moteur de recherche, paiement…), intégration du design…</li>
+    <li>Mise en ligne du site avec Heroku et mise en lien avec votre nom de domaine.</li>
+  </ol>
+  <span>Tarif: 300 euros / jour</span>
+</div>
+
+<div class="p-3">
+  <h2>Compétences principales</h2>
+  <ul>
+    <li>Ruby on Rails</li>
+    <li>Javascript</li>
+    <li>Bootstrap</li>
+    <li>HTML / CSS</li>
+    <li>WordPress</li>
+    <li>Heroku</li>
+    <li>PostgreSQL / SQL</li>
+    <li>Git / GitHub</li>
+    <li>Aisance rédactionelle / Edition</li>
+  </ul>
+</div>
+
+<div class="div-classic p-3">
+  PROJECTS
+</div>

@@ -1,1 +1,24 @@
+.navbar-light {
+  background-color: $color-tertiary;
+}
 
+.nav-item {
+  a {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.logo {
+  width: 2.5rem;
+}
+
+.navbar-menu {
+  p {
+    margin: 0;
+  }
+}

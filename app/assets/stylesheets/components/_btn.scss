@@ -1,0 +1,15 @@
+.btn-primary {
+  background: $color-tertiary;
+  border: none;
+  &:hover {
+    background: $color-tertiary;
+  }
+}
+
+.btn {
+  color: $black;
+  font-weight: 600;
+  &:hover {
+    color: $black;
+  }
+}

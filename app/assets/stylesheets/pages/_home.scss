@@ -1,7 +1,6 @@
 .home-infos {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   align-items: center;
   background-color: $color-secondary;
   color: $color-primary;
@@ -11,6 +10,10 @@
   }
 }
 
-.home-introduction {
+.div-classic {
   background-color: $color-primary;
+}
+
+.div-keppel {
+  background-color: $color-quarter;
 }

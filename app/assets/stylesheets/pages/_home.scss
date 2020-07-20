@@ -1,1 +1,16 @@
-// Specific CSS for your home-page
+.home-infos {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  background-color: $color-secondary;
+  color: $color-primary;
+  text-align: center;
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.home-introduction {
+  background-color: $color-primary;
+}

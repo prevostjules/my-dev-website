@@ -6,6 +6,14 @@
   }
 }
 
+.btn-secondary {
+  background: $color-secondary;
+  border: none;
+  &:hover {
+    background: $color-secondary;
+  }
+}
+
 .btn {
   color: $black;
   font-weight: 600;

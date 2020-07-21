@@ -1,0 +1,27 @@
+.card {
+  border: none;
+  margin-bottom: 1rem;
+
+  &-infos {
+    padding: 1rem;
+  }
+
+  &-btns {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-time {
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &-tags     {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}

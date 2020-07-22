@@ -1,0 +1,9 @@
+<%= simple_form_for @contact do |f| %>
+  <%= f.input :first_name,label: "Prénom", placeholder: "Jules" %>
+  <%= f.input :last_name, label: "Nom", placeholder: "Prévost" %>
+  <%= f.input :email, label: "Email", placeholder: "jules@prevostdev.com" %>
+  <%= f.input :phone_number, label: "Numéro de téléphone", placeholder: "06 00 00 00 00 / +33 6 00 00 00 00" %>
+  <%= f.input :company, label: "Entreprise (si pertinent)", placeholder: "Mon entreprise" %>
+  <%= f.input :message, label: "Message", placeholder: "Je veux absolument travailler avec vous !" %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>

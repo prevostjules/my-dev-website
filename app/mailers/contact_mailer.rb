@@ -12,7 +12,7 @@ class ContactMailer < ApplicationMailer
 
   def send_message_to_admin
     @contact = params[:contact]
-    mail(to: "jprevostdev@gmail.com", subject: 'Nouveau message')
+    mail(to: "jules@prevostdev.com", subject: 'Nouveau message')
   end
 
 end

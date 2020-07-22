@@ -1,0 +1,11 @@
+<h2>Nouveau message de <%= @contact.first_name %> <%= @contact.last_name %>:</h2>
+
+<p>Prénom: <%= @contact.first_name %></p>
+<p>Nom: <%= @contact.last_name %></p>
+<p>Entreprise: <%= @contact.company %></p>
+<p>Email: <%= @contact.email %></p>
+<p>Tél: <%= @contact.phone_number %></p>
+
+<h3>Message: </h3>
+
+<%= @contact.message %>

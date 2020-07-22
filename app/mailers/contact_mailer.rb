@@ -5,9 +5,8 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.message.subject
   #
-  def message
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def send_confirmation
+    @contact = params[:contact]
+    mail(to: @contact.email, subject: 'Merci pour votre message')
   end
 end

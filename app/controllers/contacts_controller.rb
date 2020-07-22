@@ -8,6 +8,8 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(set_params)
     if @contact.save!
+      mail_to_client = ContactMailer.with(contact: @contact).send_confirmation
+      mail_to_client.deliver_now
       flash[:alert] = "Merci pour votre message, nous vous répondrons dans les meilleurs délais"
       redirect_to root_path
     else

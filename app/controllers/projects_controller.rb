@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
   private
 
   def set_params
-    params.require(:project).permit(:title, :rich_body, :photo)
+    params.require(:project).permit(:title, :rich_body, :photo, photos: [])
   end
 
 end

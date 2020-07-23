@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [ :show, :edit, :update, :destroy]
 
   def new
     @project = Project.new
@@ -15,13 +16,24 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    @project.update(set_params)
+    redirect_to project_path(@project)
   end
 
   private
 
   def set_params
     params.require(:project).permit(:title, :rich_body, :photo, photos: [])
+  end
+
+  def set_project
+    @project = Project.find(params[:id])
   end
 
 end

@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     @contact = Contact.new
     @projects = Project.all
   end
+
+  def presentation
+  end
 end

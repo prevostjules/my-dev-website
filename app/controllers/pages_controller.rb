@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @contact = Contact.new
+    @projects = Project.all
   end
 end

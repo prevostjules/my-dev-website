@@ -1,5 +1,5 @@
 <div class="home-infos p-3">
-  <%= cl_image_tag("jprevost_q2yf9t.jpg", secure: true, alt: "Avatar de Jules Prévost, développeur web full-stack (Ruby on Rails)", class: "avatar-square mb-2") %>
+  <%= cl_image_tag("don%27t%20touch/jprevost_dev_site_khiib2.jpg", secure: true, alt: "Avatar de Jules Prévost, développeur web full-stack (Ruby on Rails)", class: "avatar-square mb-2") %>
   <h1>Jules Prévost</h1>
   <h2>Développeur web full-stack freelance, Ruby on Rails</h2>
   <p><i class="fas fa-map-marker-alt mr-1"></i>Bordeaux, Paris, distanciel</p>
@@ -60,14 +60,14 @@
 
 <div class="div-banana p-3">
   <h2>Mes projets</h2>
-  <%= render "shared/card-project" %>
-  <%= render "shared/card-project" %>
+  <% @projects.each do |project| %>
+    <%= render "shared/card-project", project: project %>
+  <% end %>
   <div class="d-flex justify-content-around">
     <%= link_to "Tous mes projets", root_path, class: "btn btn-secondary" %>
   </div>
 </div>
 
 <div class="classic mb-2 p-3">
-  <h2>Me contacter</h2>
   <%= render "shared/contact-form" %>
 </div>

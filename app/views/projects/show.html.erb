@@ -1,3 +1,48 @@
-<%= cl_image_tag @project.photo.key, height: 300, width: 400, crop: :fill %>
-<%= @project.title %>
-<%= @project.rich_body %>
+<h1 id="show1"><%= @project.title %></h1>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <%= cl_image_tag @project.photos.first.key, secure: true, class: "d-block w-100" %>
+    </div>
+    <% @project.photos[1...@project.photos.length].each do |photo| %>
+      <div class="carousel-item">
+        <%= cl_image_tag photo.key, secure: true, class: "d-block w-100" %>
+      </div>
+    <% end %>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="div-classic p-3">
+  <h2>Résumé</h2>
+  <div class="d-flex flex-column">
+    <%= @project.summary %>
+    <%= link_to "Voir le site", @project.link, target: "_blank", rel: "nofollow", class: "btn btn-primary mt-2" %>
+  </div>
+</div>
+
+<div class="div-banana p-3">
+  <%= @project.rich_body %>
+</div>
+
+<div class="div-keppel p-3">
+  <p class="card-time"><%= @project.workers %> personnes ont réalisé ce projet en <%= @project.days %> jours.</p>
+</div>
+<div class="card-tags  p-3">
+  <span class="badge badge-primary">Ruby on Rails</span>
+  <span class="badge badge-secondary">API</span>
+  <span class="badge badge-success">Back-end</span>
+</div>
+
+<% if current_user %>
+  <%= link_to "edit", edit_project_path(@project) %>
+  <%= link_to "Supprimer", project_path(@project), method: :delete %>
+<% end %>
+

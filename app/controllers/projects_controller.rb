@@ -26,10 +26,21 @@ class ProjectsController < ApplicationController
     redirect_to project_path(@project)
   end
 
+  def destroy
+    @project.photo.purge
+    @project.photos.purge
+    @project.destroy
+    redirect_to root_path
+  end
+
+  def index
+    @projects = Project.all
+  end
+
   private
 
   def set_params
-    params.require(:project).permit(:title, :rich_body, :photo, photos: [])
+    params.require(:project).permit(:title, :rich_body, :summary, :days, :workers, :link, :photo, photos: [])
   end
 
   def set_project

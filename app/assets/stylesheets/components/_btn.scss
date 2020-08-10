@@ -1,3 +1,11 @@
+.btn {
+  color: $black;
+  font-weight: 600;
+  &:hover {
+    color: $black;
+  }
+}
+
 .btn-primary {
   background: $color-tertiary;
   border: none;
@@ -9,15 +17,8 @@
 .btn-secondary {
   background: $color-secondary;
   border: none;
+  color: white;
   &:hover {
     background: $color-secondary;
-  }
-}
-
-.btn {
-  color: $black;
-  font-weight: 600;
-  &:hover {
-    color: $black;
   }
 }

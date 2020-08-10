@@ -2,6 +2,13 @@
   border: none;
   margin-bottom: 1rem;
 
+  &-simple {
+    background: $color-primary;
+    padding: 0.9rem 3rem 1rem 3rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+
   &-infos {
     padding: 1rem;
   }
@@ -23,5 +30,9 @@
 
   h1 {
     font-size: 1.8rem;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
   }
 }

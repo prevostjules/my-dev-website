@@ -36,9 +36,9 @@
   <p class="card-time"><%= @project.workers %> personnes ont réalisé ce projet en <%= @project.days %> jours.</p>
 </div>
 <div class="card-tags  p-3">
-  <span class="badge badge-primary">Ruby on Rails</span>
-  <span class="badge badge-secondary">API</span>
-  <span class="badge badge-success">Back-end</span>
+  <% @project.tags.each do |tag| %>
+    <span class="badge badge-<%= random_class %>"><%= tag.name %></span>
+  <% end %>
 </div>
 
 <% if current_user %>

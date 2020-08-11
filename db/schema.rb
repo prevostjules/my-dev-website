@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_23_133850) do
+ActiveRecord::Schema.define(version: 2020_08_11_145432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,13 @@ ActiveRecord::Schema.define(version: 2020_07_23_133850) do
     t.text "message"
   end
 
+  create_table "descriptions", force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.bigint "tag_id", null: false
+    t.index ["project_id"], name: "index_descriptions_on_project_id"
+    t.index ["tag_id"], name: "index_descriptions_on_tag_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.bigint "user_id", null: false
@@ -63,6 +70,10 @@ ActiveRecord::Schema.define(version: 2020_07_23_133850) do
     t.integer "days"
     t.string "link"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,5 +89,7 @@ ActiveRecord::Schema.define(version: 2020_07_23_133850) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "descriptions", "projects"
+  add_foreign_key "descriptions", "tags"
   add_foreign_key "projects", "users"
 end

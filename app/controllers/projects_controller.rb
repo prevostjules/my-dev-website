@@ -41,7 +41,7 @@ class ProjectsController < ApplicationController
   private
 
   def set_params
-    params.require(:project).permit(:title, :rich_body, :summary, :days, :workers, :link, :photo, photos: [])
+    params.require(:project).permit(:title, :rich_body, :summary, :days, :workers, :link, :photo, :tag, { tag_ids: [] }, :tag_ids, photos: [])
   end
 
   def set_project

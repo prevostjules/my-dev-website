@@ -1,25 +1,81 @@
 <div class="div-classic p-3">
-  <h1>Qui suis-je ?</h1>
-  <p>
-    Développeur freelance spécialisé Ruby on Rails
-    et Javascript, je vous accompagne dans vos projets web.
-    <span>Mes missions : vous conseiller sur les outils les plus adaptés à vos besoins et à votre budget avant de les mettre en place techniquement.</span>
-  </p>
+  <h1 class="text-center">Salut, moi c'est Jules</h1>
+  <%= cl_image_tag("don%27t%20touch/jprevost_dev_site_khiib2.jpg", secure: true, alt: "Avatar de Jules Prévost, développeur web full-stack (Ruby on Rails)", class: "avatar-round mb-4 mt-3 center") %>
+  <div class="container">
+    <p>
+      Développeur freelance spécialisé Ruby on Rails, je vous accompagne dans tous vos projets web.
+    </p>
+    <p>
+      <strong>Mes missions : vous conseiller sur les outils les plus adaptés à vos besoins et à votre budget avant de les mettre en place techniquement.</strong>
+    </p>
 
-  <p>
-    Egalement journaliste indépendant (Le Figaro Magazine, Le Monde, La Vie, GEO, La Gazette des communes…),
-    j'ai des compétences en rédaction et une bonne connaissance de la façon dont les internautes consultent des contenus web.
-  </p>
+    <p>
+      Egalement journaliste pigiste (Le Figaro Magazine, Le Monde, La Vie, GEO, La Gazette des communes…),
+      j'ai des compétences en rédaction, une bonne connaissance de la façon dont les internautes consultent des contenus web et l'habitude de travailler en indépendant.
+    </p>
+
+    <div class="d-flex justify-content-around">
+      <a target="_blank" href="https://www.linkedin.com/in/prevostjules/"><i class="fab fa-linkedin social-presentation"></i></a>
+      <a target="_blank" href="https://github.com/prevostjules"><i class="fab fa-github social-presentation"></i></a>
+    </div>
+
+  </div>
 </div>
 
 <div class="div-keppel p-3">
-  <h2>Mes services</h2>
-  <h3>Du back et de l'intégration front</h3>
-  <ol>
-    <li>Analyse de vos besoins et choix des outils à déployer</li>
-    <li>Création du parcours utilisateur</li>
-    <li>Conception d’un schéma de base de données cohérent ou mise en place d’un CMS (wordpress)</li>
-    <li>Développement du site : création de base de données, mise en place de fonctionnalités (mailing, moteur de recherche, paiement…), intégration du design…</li>
-    <li>Mise en ligne du site avec Heroku et mise en lien avec votre nom de domaine.</li>
-  </ol>
+  <h2>Expérience</h2>
+  <div class="card card-simple card-cv">
+    <h3>Développeur web</h3>
+    <p class="light">juillet 2020 - maintenant</p>
+    <p>Freelance, full-stack, spécialisé en Ruby on Rails.</p>
+      <%= link_to "Mes projets", projects_path, class: "btn btn-primary mb-2" %>
+      <%= link_to "Mon GitHub", "https://github.com/prevostjules", target: "_blank", class: "btn btn-primary" %>
+  </div>
+
+  <div class="card card-simple card-cv">
+    <h3>Teacher assistant</h3>
+    <h4>Le Wagon Bordeaux</h4>
+    <p class="light">juillet 2020 - maintenant</p>
+    <p>En tant que professeur assistant, j’aide les étudiants à mener à bien leurs projets en Ruby, Javascript, HTML, CSS, Bootstrap.</p>
+  </div>
+
+  <div class="card card-simple card-cv">
+    <h3>Journaliste</h3>
+    <p class="light">2015 - maintenant</p>
+    <p>Reporter, journaliste à la pige pour GEO, Le Figaro Magazine, l'Atlas La Vie-Le Monde, Le Monde Vidéos, Le Parisien Week-End, la Gazette des communes, Regain et quelques autres. Auparavant apprenti à GEO.</p>
+      <%= link_to "Mes réalisations", "https://ginkio.com/jules-prevost", target: "_blank", class: "btn btn-primary" %>
+  </div>
+
+  <div class="card card-simple card-cv">
+    <h3>Moniteur de voile</h3>
+    <h4>Beg-Porz, Moëlan-sur-Mer</h4>
+    <p class="light">2014 - maintenant</p>
+    <p>De temps en temps moniteur de voile en Bretagne.</p>
+  </div>
+</div>
+
+
+
+<div class="div-banana p-3">
+  <h2>Formation</h2>
+  <div class="card card-simple card-cv">
+    <h3>Le Wagon Bordeaux</h3>
+    <p class="light">avril - juillet 2020</p>
+    <p>
+      9 semaines d’apprentissage intensif du développement web en HTML, CSS, Bootstrap, JavaScript ES2015,
+      SQL, git, GitHub, Heroku et Ruby on Rails.
+    </p>
+  </div>
+
+  <div class="card card-simple card-cv">
+    <h3>CFJ Paris (Centre de formation des journalistes)</h3>
+    <p class="light">2015-2017</p>
+    <p>Chef d'édition pour le Parisien Mag, version CFJ. Réalisation de vidéos dans le cadre de la présidentielle 2017 sur les candidats Jacques Cheminade, Nathalie Arthaud et Philippe Poutou. Développement de deux sites web. Reportage en Espagne sur la pauvreté énergétique.</p>
+  </div>
+
+  <div class="card card-simple card-cv">
+    <h3>Hypokhâgne, Khâgne, Khûbe, Claude Monet, Paris</h3>
+    <p class="light">2011-2014</p>
+    <p>Trois ans d'études passionnantes en Philosophie, Histoire, Géographie, Littérature. Sous-admissible à l'ENS Paris.</p>
+  </div>
 </div>

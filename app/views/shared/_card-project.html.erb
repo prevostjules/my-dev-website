@@ -8,7 +8,7 @@
     <%= link_to "Voir le site", project.link, target: "_blank", rel: "nofollow", class: "btn btn-primary" %>
     </div>
     <hr>
-    <p class="card-time">4 personnes ont réalisé ce projet en 9 jours.</p>
+    <p class="card-time mb-2">4 personnes ont réalisé ce projet en 9 jours.</p>
     <div class="card-tags">
       <% project.tags.each do |tag| %>
         <span class="badge badge-<%= random_class %>"><%= tag.name %></span>

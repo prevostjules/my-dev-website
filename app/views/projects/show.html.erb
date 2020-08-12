@@ -1,4 +1,6 @@
-<h1 id="show1"><%= @project.title %></h1>
+<div class="container">
+  <h1 id="show1"><%= @project.title %></h1>
+</div>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -21,19 +23,25 @@
 </div>
 
 <div class="div-classic p-3">
-  <h2>Résumé</h2>
-  <div class="d-flex flex-column">
-    <%= @project.summary %>
-    <%= link_to "Voir le site", @project.link, target: "_blank", rel: "nofollow", class: "btn btn-primary mt-2" %>
+  <div class="card card-simple">
+    <h3>Résumé</h3>
+    <div class="d-flex flex-column">
+      <%= @project.summary %>
+      <%= link_to "Voir le site", @project.link, target: "_blank", rel: "nofollow", class: "btn btn-primary mt-2" %>
+    </div>
   </div>
 </div>
 
 <div class="div-banana p-3">
-  <%= @project.rich_body %>
+  <div class="container">
+    <%= @project.rich_body %>
+  </div>
 </div>
 
 <div class="div-keppel p-3">
-  <p class="card-time"><%= @project.workers %> personnes ont réalisé ce projet en <%= @project.days %> jours.</p>
+  <div class="container">
+    <p class="card-time"><%= @project.workers %> personnes ont réalisé ce projet en <%= @project.days %> jours.</p>
+  </div>
 </div>
 <div class="card-tags  p-3">
   <% @project.tags.each do |tag| %>

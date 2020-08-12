@@ -30,3 +30,17 @@
   }
 }
 
+.missions-big-screen {
+    @include big-screen {
+    display: flex;
+  }
+}
+
+.div-classic-home-big-screen {
+  @include big-screen {
+    display: flex;
+    max-width: 30%;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

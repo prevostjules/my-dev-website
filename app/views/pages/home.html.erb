@@ -16,37 +16,39 @@
   </div>
 </div>
 
-<div class="div-classic p-3">
-  <p class="slogan">Je vous accompagne dans tous vos projets web.</p>
-</div>
+<div class="missions-big-screen">
+  <div class="div-classic p-3 div-classic-home-big-screen">
+    <p class="slogan">Je vous accompagne dans tous vos projets web.</p>
+  </div>
 
 
-<div class="div-keppel p-3">
-  <div class="container card-container">
-    <div class="card card-simple">
-      <h3>Analyse</h3>
-      <p>J’étudie vos besoins, votre budget et je vous aide à choisir les outils les plus adaptés à votre projet.</p>
-    </div>
-    <div class="card card-simple">
-      <h3>Conception</h3>
-      <p>A vos côtés, je crée un parcours utilisateur et un schéma de base de données cohérent avec votre idée.</p>
-    </div>
-    <div class="card card-simple">
-      <h3>Code</h3>
-      <p>Mailing, recherche intégrée, solution de paiement, intégration du design… Ligne de code après ligne de code, je donne vie à votre site et vous accompagne jusqu’à sa mise en ligne.</p>
-    </div>
-    <div class="card card-simple">
-      <h3>Délais</h3>
-      <p>Dès le début, nous fixons ensemble un calendrier clair avec différentes étapes de rendu. A chaque étape, vous pourrez ainsi contrôler la bonne avancée du travail.</p>
+  <div class="div-keppel p-3">
+    <div class="container card-container">
+      <div class="card card-simple">
+        <h3>Analyse</h3>
+        <p>J’étudie vos besoins, votre budget et je vous aide à choisir les outils les plus adaptés à votre projet.</p>
+      </div>
+      <div class="card card-simple">
+        <h3>Conception</h3>
+        <p>A vos côtés, je crée un parcours utilisateur et un schéma de base de données cohérent avec votre idée.</p>
+      </div>
+      <div class="card card-simple">
+        <h3>Code</h3>
+        <p>Mailing, recherche intégrée, solution de paiement, intégration du design… Ligne de code après ligne de code, je donne vie à votre site et vous accompagne jusqu’à sa mise en ligne.</p>
+      </div>
+      <div class="card card-simple">
+        <h3>Délais</h3>
+        <p>Dès le début, nous fixons ensemble un calendrier clair avec différentes étapes de rendu. A chaque étape, vous pourrez ainsi contrôler la bonne avancée du travail.</p>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="home-infos p-3 text-center">
-  <strong>Tarif: 300 euros / jour</strong>
+  <strong>Tarif : 300 euros / jour</strong>
 </div>
 
-<div class="p-3">
+<div class="p-3 container">
   <h2>Compétences</h2>
   <div class="competences">
     <%= image_tag "ruby-on-rails.png", alt: "Logo de Ruby On Rails", class: "logo-img" %>
@@ -62,8 +64,9 @@
 </div>
 
 <div class="div-banana p-3">
+  <div class="container">
   <h2>Mes projets</h2>
-  <div class="container card-container">
+  <div class="card-container">
     <% @projects.each do |project| %>
       <%= render "shared/card-project", project: project %>
     <% end %>
@@ -71,6 +74,7 @@
   <div class="d-flex justify-content-around">
     <%= link_to "Tous mes projets", projects_path, class: "btn btn-secondary" %>
   </div>
+</div>
 </div>
 
 <div class="classic mb-2 p-3">

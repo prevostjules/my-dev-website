@@ -6,6 +6,10 @@
     max-width: 47%;
   }
 
+  @include big-screen {
+    max-width: 34%;
+  }
+
   h1 {
     font-size: 1.8rem;
   }
@@ -13,6 +17,14 @@
   h2 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+
+    @include medium-screen {
+      font-size: 1.5rem;
+    }
+
+    @include big-screen {
+      font-size: 1.4rem;
+    }
   }
 
   h3 {
@@ -35,6 +47,11 @@
 
     @include medium-screen {
       max-width: 42%;
+    }
+
+    @include big-screen {
+      max-width: 34%;
+      padding: 0.9rem 3rem 1rem 3rem;
     }
   }
 

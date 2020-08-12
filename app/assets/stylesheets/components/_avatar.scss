@@ -6,6 +6,9 @@
 .avatar-square {
   width: 8rem;
   border-radius: 20%;
+  @include big-screen {
+    width: 10rem;
+  }
 }
 
 .avatar-round {

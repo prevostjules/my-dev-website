@@ -1,6 +1,10 @@
 .card {
   border: none;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
+
+  @include medium-screen {
+    max-width: 47%;
+  }
 
   h1 {
     font-size: 1.8rem;
@@ -15,11 +19,23 @@
     margin-bottom: 2rem;
   }
 
+  &-container {
+    @include medium-screen {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
   &-simple {
     background: $color-primary;
     padding: 0.9rem 3rem 1rem 3rem;
     border-radius: 2px;
     margin-bottom: 1rem;
+
+    @include medium-screen {
+      max-width: 42%;
+    }
   }
 
   &-infos {
@@ -35,7 +51,7 @@
   }
 
   &-time {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 300;
   }
 
@@ -53,6 +69,4 @@
       font-weight: 500;
     }
   }
-
-
 }

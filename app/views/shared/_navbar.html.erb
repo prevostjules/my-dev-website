@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light">
   <%= link_to root_path do %>
-   <%= image_tag "jprevostdev.svg", class: "logo" %>
-   <%= image_tag "jprevost-text.svg", class: "logo text-logo" %>
+    <%= image_tag "jprevostdev.svg", class: "logo" %>
+    <%= image_tag "jprevost-text.svg", class: "logo text-logo" %>
   <% end %>
 
   <% if user_signed_in? %>
@@ -16,7 +16,6 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <%= link_to "Présentation", presentation_path, class:"nav-link" %>
-        <!-- <a class="nav-link" href="#">Présentation<span class="sr-only">(current)</span></a> -->
       </li>
       <li class="nav-item">
         <%= link_to "Portfolio", projects_path, class: "nav-link" %>
@@ -24,6 +23,7 @@
       <li class="nav-item">
         <%= link_to "Contact", new_contact_path, class: "nav-link" %>
       </li>
+    </ul>
   </div>
 </nav>
 

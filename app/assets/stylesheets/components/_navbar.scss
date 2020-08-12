@@ -11,6 +11,9 @@
 
 .navbar-toggler {
   border: none;
+  @include medium-screen {
+    display: none;
+  }
 }
 
 .logo {
@@ -25,5 +28,24 @@
 .navbar-menu {
   p {
     margin: 0;
+  }
+}
+
+.collapse:not(.show) {
+  @include medium-screen {
+    display: block;
+    .navbar-nav {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.navbar-collapse {
+  @include medium-screen {
+    flex-basis: 0;
+    .nav-item {
+      margin: 0 1rem;
+    }
   }
 }

@@ -6,6 +6,9 @@
     max-width: 20%;
     margin: 1rem;
   }
+  @include big-screen {
+    max-width: 6%;
+  }
 }
 
 .competences {

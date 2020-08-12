@@ -25,4 +25,8 @@
 .slogan {
   margin: 1.5rem;
   font-size: 2.5rem;
+  @include medium-screen {
+    margin: 2.5rem 4.5rem;
+  }
 }
+

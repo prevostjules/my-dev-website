@@ -19,22 +19,26 @@
 <div class="div-classic p-3">
   <p class="slogan">Je vous accompagne dans tous vos projets web.</p>
 </div>
+
+
 <div class="div-keppel p-3">
-  <div class="card card-simple">
-    <h3>Analyse</h3>
-    <p>J’étudie vos besoins, votre budget et je vous aide à choisir les outils les plus adaptés à votre projet.</p>
-  </div>
-  <div class="card card-simple">
-    <h3>Conception</h3>
-    <p>A vos côtés, je crée un parcours utilisateur et un schéma de base de données cohérent avec votre idée.</p>
-  </div>
-  <div class="card card-simple">
-    <h3>Code</h3>
-    <p>Mailing, recherche intégrée, solution de paiement, intégration du design… Ligne de code après ligne de code, je donne vie à votre site et vous accompagne jusqu’à sa mise en ligne.</p>
-  </div>
-  <div class="card card-simple">
-    <h3>Délais</h3>
-    <p>Dès le début, nous fixons ensemble un calendrier clair avec différentes étapes de rendu. A chaque étape, vous pourrez ainsi contrôler la bonne avancée du travail.</p>
+  <div class="container card-container">
+    <div class="card card-simple">
+      <h3>Analyse</h3>
+      <p>J’étudie vos besoins, votre budget et je vous aide à choisir les outils les plus adaptés à votre projet.</p>
+    </div>
+    <div class="card card-simple">
+      <h3>Conception</h3>
+      <p>A vos côtés, je crée un parcours utilisateur et un schéma de base de données cohérent avec votre idée.</p>
+    </div>
+    <div class="card card-simple">
+      <h3>Code</h3>
+      <p>Mailing, recherche intégrée, solution de paiement, intégration du design… Ligne de code après ligne de code, je donne vie à votre site et vous accompagne jusqu’à sa mise en ligne.</p>
+    </div>
+    <div class="card card-simple">
+      <h3>Délais</h3>
+      <p>Dès le début, nous fixons ensemble un calendrier clair avec différentes étapes de rendu. A chaque étape, vous pourrez ainsi contrôler la bonne avancée du travail.</p>
+    </div>
   </div>
 </div>
 
@@ -59,14 +63,18 @@
 
 <div class="div-banana p-3">
   <h2>Mes projets</h2>
-  <% @projects.each do |project| %>
-    <%= render "shared/card-project", project: project %>
-  <% end %>
+  <div class="container card-container">
+    <% @projects.each do |project| %>
+      <%= render "shared/card-project", project: project %>
+    <% end %>
+  </div>
   <div class="d-flex justify-content-around">
     <%= link_to "Tous mes projets", projects_path, class: "btn btn-secondary" %>
   </div>
 </div>
 
 <div class="classic mb-2 p-3">
-  <%= render "shared/contact-form" %>
+  <div class="container">
+    <%= render "shared/contact-form" %>
+  </div>
 </div>

@@ -1,6 +1,3 @@
-<div class="container">
-  <h1 id="show1"><%= @project.title %></h1>
-</div>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -22,12 +19,16 @@
   </a>
 </div>
 
-<div class="div-classic p-3">
-  <div class="card card-simple">
+<div class="container">
+  <h1 id="show1"><%= @project.title %></h1>
+</div>
+
+<div class="div-keppel p-3">
+  <div class="card card-simple card-summary">
     <h3>Résumé</h3>
     <div class="d-flex flex-column">
       <%= @project.summary %>
-      <%= link_to "Voir le site", @project.link, target: "_blank", rel: "nofollow", class: "btn btn-primary mt-2" %>
+      <%= link_to "Voir le site", @project.link, target: "_blank", rel: "nofollow", class: "btn btn-primary mt-5" %>
     </div>
   </div>
 </div>
@@ -38,9 +39,10 @@
   </div>
 </div>
 
-<div class="div-keppel p-3">
-  <div class="d-flex justify-content-around card-time">
-    <div class="d-flex align-items-center">
+<div class="card-time-medium">
+<div class="div-keppel p-3 card-grow">
+  <div class="card-time">
+    <div class="d-flex align-items-center" id="time">
       <%= user_or_users(@project.workers) %>
       <p class="mb-0 ml-2"><%= @project.workers %></p>
     </div>
@@ -50,12 +52,12 @@
     </div>
   </div>
 </div>
-<div class="card-tags  p-3">
+<div class="card-tags card-tags-show  p-3">
   <% @project.tags.each do |tag| %>
     <span class="badge badge-<%= random_class %>"><%= tag.name %></span>
   <% end %>
 </div>
-
+</div>
 <% if current_user %>
   <%= link_to "edit", edit_project_path(@project) %>
   <%= link_to "Supprimer", project_path(@project), method: :delete %>

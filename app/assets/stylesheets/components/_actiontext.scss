@@ -35,4 +35,12 @@
   }
 
   margin-bottom: 1.5rem;
+
+  @include medium-screen {
+    padding: 2rem 3rem;
+  }
+
+  @include big-screen {
+    padding: 2rem 8rem;
+  }
 }

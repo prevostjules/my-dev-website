@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@project.title} - #{DEFAULT_META["meta_product_name"]} - Développeur web" %>
+<% content_for :meta_description, @project.summary %>
+<% content_for :meta_image, cl_image_path(@project.photo.path) %>
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">

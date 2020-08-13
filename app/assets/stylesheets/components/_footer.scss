@@ -3,14 +3,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 0px 50px;
+  @include medium-screen {
+    justify-content: center;
+  }
 }
 
 .footer-links a {
   color: black;
   opacity: 1;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   padding: 0px 10px;
+  @include medium-screen {
+    justify-content: center;
+  }
 }
 
 .footer-copyright {

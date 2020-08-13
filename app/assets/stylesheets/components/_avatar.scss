@@ -6,12 +6,15 @@
 .avatar-square {
   width: 8rem;
   border-radius: 20%;
-  @include big-screen {
-    width: 10rem;
-  }
 }
 
 .avatar-round {
   width: 8rem;
   border-radius: 50%;
+}
+
+.avatar-square, .avatar-round {
+    @include big-screen {
+    width: 10rem;
+  }
 }

@@ -1,6 +1,10 @@
 <div class="div-banana p-3">
-  <% @projects.each do |project| %>
-    <%= render "shared/card-project", project: project %>
-  <% end %>
+  <div class="container">
+    <h2>Mes projets</h2>
+    <div class="card-container">
+      <% @projects.each do |project| %>
+        <%= render "shared/card-project", project: project %>
+      <% end %>
+    </div>
+  </div>
 </div>
-

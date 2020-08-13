@@ -1,5 +1,5 @@
 meta_product_name: "Jules Prévost"
 meta_title: "Jules Prévost - Développeur web"
 meta_description: "Développeur web full-stack freelance, spécialisé Ruby on Rails. Bordeaux, Paris, distanciel"
-meta_image: "cover.png" # should exist in `app/assets/images/`
-twitter_account: "@product_twitter_account"
+meta_image: "cover_jprevost.png" # should exist in `app/assets/images/`
+twitter_account: "@prevost_jules"

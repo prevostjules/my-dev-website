@@ -8,4 +8,9 @@
   <%= f.input :company, label: "Entreprise (facultatif)", placeholder: "Mon entreprise" %>
   <%= f.input :message, label: "Message", placeholder: "Je veux absolument travailler avec vous !" %>
   <%= f.button :submit, "Me contacter", class: "btn btn-primary mb-3" %>
+  <% if @show_checkbox_recaptcha %>
+    <%= recaptcha_tags %>
+  <% else %>
+    <%= recaptcha_v3(action: 'contact') %>
+  <% end %>
 <% end %>

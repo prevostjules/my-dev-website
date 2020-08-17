@@ -75,6 +75,7 @@
   &-tags     {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
     @include medium-screen {
       flex-grow: 5;
@@ -170,6 +171,7 @@
 }
 
 .card-tags-show .badge {
+  margin: 0.3rem;
   @include medium-screen {
     font-size: 100%;
   }

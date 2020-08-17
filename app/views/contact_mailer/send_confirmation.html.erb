@@ -1,59 +1,107 @@
-<h2>Bonjour <%= @contact.first_name %> <%= @contact.last_name %>,</h2>
+<style>
 
-<p>Merci beaucoup pour votre message : </p>
+  .banner {
+    max-width: 100%;
+  }
 
-<p style="font-style: italic;">"<%= @contact.message %>"</p>
+  .keppel {
+    background-color: #5FB49C;
+    padding: 1rem;
+  }
 
-<p>Je reviendrai vers vous dans les plus brefs délais.</p>
+  .classic {
+    background-color: #FFFFFF;
+    max-width: 80%;
+    border-radius: 3px;
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+  }
 
-<p>Bien à vous,</p>
+  .classic-signature {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
 
---
+  .message {
+    max-width: fit-content;
+    background: #FFEFC2;
+    padding: 1rem;
+    margin: 0 auto;
+  }
 
-<div dir="ltr">
-  <div>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">
-        <b>Jules Prévost - Freelance full-stack web developer (Bordeaux and remote)</b>
-      </span>
-    </span>
+  p {
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: 15px;
+  }
+</style>
+<div class="keppel" style="background-color: #5FB49C;padding: 1rem;">
+  <img src="https://res.cloudinary.com/dsqxg7gtz/image/upload/v1597686038/don%27t%20touch/cover_jprevost_wdylts.png" alt="Banière de Jules Prévost - Développeur web" , class="banner" style="max-width: 100%;">
+  <div class="classic" style="background-color: #FFFFFF;max-width: 80%;border-radius: 3px;margin: 1rem auto;padding: 1rem 3rem;">
+    <h2 style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 18px;">Bonjour <%= @contact.first_name %> <%= @contact.last_name %>,</h2>
+
+    <p style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 15px;">Merci beaucoup pour votre message. </p>
+
+    <div class="message" style="max-width: fit-content;background: #FFEFC2;padding: 1rem;margin: 0 auto;">
+      <p style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;font-size: 15px;">Votre message:</p>
+      <p style="font-style: italic;font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 15px;">"<%= @contact.message %>"</p>
+    </div>
+    <p style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 15px;">Je reviendrai vers vous dans les plus brefs délais.</p>
+
+    <p style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 15px;">Bien à vous,</p>
   </div>
-  <div>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">Trained at&nbsp;<a href="https://www.lewagon.com/fr/bordeaux" target="_blank">Le Wagon Bordeaux</a></span>
-      <span style="font-size:12px"></span>
-    </span>
-  </div>
-  <div>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">+33 6 35 55 39 94 [Signal - WhatsApp - Telegram- Viber]</span>
-      <span style="font-size:12px"></span>
-    </span>
-  </div>
-  <div>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">
-        <a href="mailto:jules@prevostdev.com" target="_blank">jules@prevostdev.com</a>
-      </span>
-    </span>
-  </div>
-  <div>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">You should :</span>
-    </span>
-  </div>
-  <div>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">- see my&nbsp;<a href="https://github.com/prevostjules" target="_blank">GitHub</a></span>
-    </span>
-  </div>
-  <div>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">- follow me on&nbsp;</span>
-    </span>
-    <a href="https://www.linkedin.com/in/prevostjules/" title="https://www.linkedin.com/in/prevostjules/" rel="nofollow" style="font-family:arial,sans-serif;font-size:12px" target="_blank">LinkedIn</a>
-    <span style="font-family:arial,sans-serif">
-      <span style="font-size:12px">,&nbsp;<a href="https://twitter.com/prevost_jules" title="https://twitter.com/prevost_jules" rel="nofollow" target="_blank">Twitter</a>,&nbsp;<a href="https://www.facebook.com/julesael.prevost" title="https://www.facebook.com/julesael.prevost" rel="nofollow" target="_blank">Facebook</a>&nbsp;and&nbsp;<a href="https://www.instagram.com/prevost_jules/" title="https://www.instagram.com/prevost_jules/" rel="nofollow" target="_blank">Instagram</a></span>
-    </span>
+  --
+  <div class="classic classic-signature" style="background-color: #FFFFFF;max-width: 80%;border-radius: 3px;margin: 1rem 0;padding: 1rem;">
+    <div dir="ltr">
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">
+            <b>Jules Prévost - Freelance full-stack web developer (Bordeaux and remote)</b>
+          </span>
+        </span>
+      </div>
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">Trained at&nbsp;<a href="https://www.lewagon.com/fr/bordeaux" target="_blank">Le Wagon Bordeaux</a></span>
+          <span style="font-size:12px"></span>
+        </span>
+      </div>
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">+33 6 35 55 39 94 [Signal - WhatsApp - Telegram- Viber]</span>
+          <span style="font-size:12px"></span>
+        </span>
+      </div>
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">
+            <a href="mailto:jules@prevostdev.com" target="_blank">jules@prevostdev.com</a>
+          </span>
+        </span>
+      </div>
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">You should :</span>
+        </span>
+      </div>
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">- see my&nbsp;<a href="https://github.com/prevostjules" target="_blank">GitHub</a></span>
+        </span>
+      </div>
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">- follow me on&nbsp;</span>
+        </span>
+        <a href="https://www.linkedin.com/in/prevostjules/" title="https://www.linkedin.com/in/prevostjules/" rel="nofollow" style="font-family:arial,sans-serif;font-size:12px" target="_blank">LinkedIn</a>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">,&nbsp;<a href="https://twitter.com/prevost_jules" title="https://twitter.com/prevost_jules" rel="nofollow" target="_blank">Twitter</a>,&nbsp;<a href="https://www.facebook.com/julesael.prevost" title="https://www.facebook.com/julesael.prevost" rel="nofollow" target="_blank">Facebook</a>&nbsp;and&nbsp;<a href="https://www.instagram.com/prevost_jules/" title="https://www.instagram.com/prevost_jules/" rel="nofollow" target="_blank">Instagram</a></span>
+        </span>
+      </div>
+      <div>
+        <span style="font-family:arial,sans-serif">
+          <span style="font-size:12px">- visit my&nbsp;<a href="https://www.prevostdev.com" target="_blank">website</a> (again)</span>
+        </span>
+      </div>
+    </div>
   </div>
 </div>

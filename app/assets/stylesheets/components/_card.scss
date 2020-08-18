@@ -176,3 +176,20 @@
     font-size: 100%;
   }
 }
+
+.git-activity {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+#results {
+  display: none;
+  @include big-screen {
+    display: flex;
+  }
+}
+
+.card-result {
+  max-width: 60%;
+}

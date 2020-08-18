@@ -7,6 +7,9 @@
   <%= f.input :phone_number, label: "Numéro de téléphone", placeholder: "06 00 00 00 00 / +33 6 00 00 00 00" %>
   <%= f.input :company, label: "Entreprise (facultatif)", placeholder: "Mon entreprise" %>
   <%= f.input :message, label: "Message", placeholder: "Je veux absolument travailler avec vous !" %>
+  <p class="captcha">This site is protected by reCAPTCHA and the Google
+    <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+    <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
   <%= f.button :submit, "Me contacter", class: "btn btn-primary mb-3" %>
   <% if @show_checkbox_recaptcha %>
     <%= recaptcha_tags %>

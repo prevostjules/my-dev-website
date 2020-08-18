@@ -1,8 +1,10 @@
 const results = document.querySelector("#results");
-var commits = 0;
-var numberOfRepos = 0;
-var repos = [];
-var commits_by_date = [];
+let commits = 0;
+let numberOfRepos = 0;
+let repos = [];
+let commits_by_date = [];
+let repository = "repositories"
+let commit = "commits"
 
 const callGitApi = () => {
   if (results) {
@@ -17,8 +19,17 @@ const callGitApi = () => {
           commits_by_date.push(result["created_at"]);
         }
       });
+      let date = new Date(commits_by_date[commits_by_date.length - 1])
+      let dateLocale = date.toLocaleDateString();
+
       repos = [...new Set(repos)];
-      const gitApi = `"${commits}-${repos.length}-${commits_by_date[commits_by_date.length - 1]}"`;
+      if (repos.length == 1) {
+        repository = "repository"
+      }
+      if (commit ==1) {
+        commit = "commit"
+      }
+      const gitApi = `<div class="div-keppel p-3 git-activity"><div class="card card-simple card-result"><h3>Git & GitHub</h3><p>${commits} ${commit} poussés sur ${repos.length} ${repository} depuis le ${dateLocale}.</p></div></div>`;
       results.insertAdjacentHTML("beforeend", gitApi);
     });
   }

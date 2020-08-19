@@ -1,3 +1,6 @@
+<%= content_for :recaptcha_js do %>
+  <%= include_recaptcha_js %>
+<% end %>
 <h2>Contact</h2>
 <p><span>Email: </span><a href="mailto:jules@prevostdev.com">jules@prevostdev.com</a></p>
 <%= simple_form_for @contact do |f| %>
@@ -11,9 +14,5 @@
     <a href="https://policies.google.com/privacy">Privacy Policy</a> and
     <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
   <%= f.button :submit, "Me contacter", class: "btn btn-primary mb-3" %>
-  <% if @show_checkbox_recaptcha %>
-    <%= recaptcha_tags %>
-  <% else %>
-    <%= recaptcha_v3(action: 'contact') %>
-  <% end %>
+  <%= recaptcha_execute('contact') %>
 <% end %>

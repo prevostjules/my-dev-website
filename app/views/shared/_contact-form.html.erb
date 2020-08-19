@@ -1,6 +1,3 @@
-<%= content_for :recaptcha_js do %>
-  <%= include_recaptcha_js %>
-<% end %>
 <h2>Contact</h2>
 <p><span>Email: </span><a href="mailto:jules@prevostdev.com">jules@prevostdev.com</a></p>
 <%= simple_form_for @contact do |f| %>
@@ -10,9 +7,15 @@
   <%= f.input :phone_number, label: "Numéro de téléphone", placeholder: "06 00 00 00 00 / +33 6 00 00 00 00" %>
   <%= f.input :company, label: "Entreprise (facultatif)", placeholder: "Mon entreprise" %>
   <%= f.input :message, label: "Message", placeholder: "Je veux absolument travailler avec vous !" %>
+  <% if @show_checkbox_recaptcha %>
+    <%= recaptcha_tags %>
+  <% else %>
+    <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
+      <%= submit_tag "Me contacter", class: "btn btn-primary mb-3" %>
+  <% end %>
   <p class="captcha">This site is protected by reCAPTCHA and the Google
     <a href="https://policies.google.com/privacy">Privacy Policy</a> and
     <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
-  <%= f.button :submit, "Me contacter", class: "btn btn-primary mb-3" %>
-  <%= recaptcha_execute('contact') %>
+
+  <%#= f.button :submit, "Me contacter", class: "btn btn-primary mb-3" %>
 <% end %>

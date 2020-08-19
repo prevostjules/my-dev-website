@@ -38,6 +38,7 @@ gem 'simple_form'
 
 gem 'cloudinary', '~> 1.12.0'
 gem 'postmark-rails'
+gem 'invisible_captcha'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
@@ -65,6 +66,5 @@ group :test do
   gem 'webdrivers'
 end
 
-gem "recaptcha"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -9,12 +9,7 @@ class ContactsController < ApplicationController
 
     @contact = Contact.new(set_params)
 
-    unless verify_recaptcha?(params[:recaptcha_token], 'contact')
-      flash.now[:error] = "reCAPTCHA Authorization a échoué. Merci d'essayer plus tard."
-      return render :new
-    end
-
-    if @contact.save
+    if verify_recaptcha?(params[:recaptcha_token], 'contact') && @contact.save
       mail_to_client = ContactMailer.with(contact: @contact).send_confirmation
       mail_to_client.deliver_now
       mail_to_admin = ContactMailer.with(contact: @contact).send_message_to_admin

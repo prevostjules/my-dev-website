@@ -171,10 +171,13 @@
 }
 
 .card-tags-show .badge {
-  margin: 0.3rem;
   @include medium-screen {
     font-size: 100%;
   }
+}
+
+.badge {
+  margin: 0.3rem;
 }
 
 .git-activity {

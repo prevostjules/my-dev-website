@@ -22,8 +22,9 @@ h3 {
 .captcha {
   font-size: 0.5rem;
   font-style: italic;
+  color: $color-secondary;
 }
 
-  // .grecaptcha-badge {
-  //   visibility: hidden;
-  // }
+  .grecaptcha-badge {
+    visibility: hidden;
+  }

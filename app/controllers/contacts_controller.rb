@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   skip_before_action :authenticate_user!
+  invisible_captcha only: [:create], honeypot: :state
 
   def new
     @contact = Contact.new
@@ -8,11 +9,6 @@ class ContactsController < ApplicationController
   def create
 
   @contact = Contact.new(set_params)
-
-  unless verify_recaptcha?(params[:recaptcha_token], 'contact')
-    flash.now[:error] = "reCAPTCHA Authorization Failed. Please try again later."
-    return render :new
-  end
 
   if @contact.save
     mail_to_client = ContactMailer.with(contact: @contact).send_confirmation

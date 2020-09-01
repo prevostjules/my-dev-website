@@ -29,10 +29,9 @@
   </head>
 
   <body>
-    <%= yield :recaptcha_js %>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
+    <%= flash[:error] %>
     <%= yield %>
 
     <%= render 'shared/footer' %>

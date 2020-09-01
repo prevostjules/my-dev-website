@@ -19,12 +19,7 @@ h3 {
   color: #6E6E6E;
 }
 
-.captcha {
-  font-size: 0.5rem;
-  font-style: italic;
-  color: $color-secondary;
-}
 
-  .grecaptcha-badge {
-    visibility: hidden;
-  }
+.wrapper {
+  min-height: calc(100vh - 75px - 60px);
+}

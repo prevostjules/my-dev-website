@@ -32,7 +32,9 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= flash[:error] %>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
 
     <%= render 'shared/footer' %>
   </body>

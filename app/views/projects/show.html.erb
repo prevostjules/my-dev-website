@@ -9,7 +9,7 @@
     </div>
     <% @project.photos[1...@project.photos.length].each do |photo| %>
       <div class="carousel-item">
-        <%= cl_image_tag photo.key, secure: true, class: "d-block w-100" %>
+        <%= cl_image_tag photo.key, alt: "Image d'illustration du site #{@project.title}", secure: true, class: "d-block w-100" %>
       </div>
     <% end %>
   </div>

@@ -1,12 +1,58 @@
-.home-infos {
+.home-infos-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $color-secondary;
+  justify-content: space-evenly;
+  min-height: calc(100vh - #{$navbar-height-mobile});
+    @include big-screen {
+    min-height: calc(100vh - #{$navbar-height});
+  }
+}
+
+.home-infos {
+  background-color: $color-background-primary;
   color: $color-primary;
   text-align: center;
+
+
+  h1 {
+    font-size: 2rem;
+    @include medium-screen {
+      font-size: 2.5rem;
+    }
+    letter-spacing: 0.1rem;
+    color: $banner-h1;
+    margin-bottom: 1.2rem;
+  }
+
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  h2, h3 {
+    color: $banner-headers;
+  }
+  @include medium-screen {
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+.home-infos-highlights {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-infos-highlight {
+  width: 33%;
+  color: $banner-color;
+  @include medium-screen {
+    font-size: 2rem;
+  }
+  .logo-img {
+    max-width: 34%;
+    margin: 1rem;
   }
 }
 
@@ -23,10 +69,26 @@
 }
 
 .slogan {
-  margin: 1.5rem;
-  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
   @include medium-screen {
-    margin: 2.5rem 4.5rem;
+    font-size: 1.5rem;
+  }
+  justify-content: center;
+  color: $banner-color;
+  p {
+    margin: 1rem 0.5rem;
+    @include medium-screen {
+      margin: 2rem 0.5rem;
+    }
+  }
+  .fa-quote-left {
+    margin-top: 1rem;
+  }
+
+  .fa-quote-right {
+    margin-bottom: 1rem;
   }
 }
 

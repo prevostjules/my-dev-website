@@ -1,19 +1,40 @@
-<div class="home-infos p-3">
-  <%= cl_image_tag("don%27t%20touch/jprevost_dev_site_khiib2.jpg", secure: true, alt: "Avatar de Jules Prévost, développeur web full-stack (Ruby on Rails)", class: "avatar-square mb-2") %>
-  <h1>Jules Prévost</h1>
-  <h2>Développeur web full-stack freelance, Ruby on Rails</h2>
-  <p><i class="fas fa-map-marker-alt mr-1"></i>Bordeaux, Paris, distanciel</p>
-  <div class="social-links">
+<div class="home-infos p-3 ">
+  <div class="container home-infos-flex">
+    <div class="test">
+    <%= cl_image_tag("don%27t%20touch/jprevost_dev_site_khiib2.jpg", secure: true, alt: "Avatar de Jules Prévost, développeur web full-stack (Ruby on Rails)", class: "avatar-square mb-3") %>
+    <h1>Jules Prévost</h1>
+    <h2>Développeur web freelance</h2>
+    <h3><i class="fas fa-map-marker-alt mr-1"></i>Bordeaux, Paris, distanciel</h3>
+    </div>
+    <div class="slogan">
+      <i class="fas fa-quote-left"></i><p>Je vous accompagne dans tous vos projets web</p><i class="fas fa-quote-right"></i>
+    </div>
+    <div class="home-infos-highlights">
+      <div class="home-infos-highlight">
+        <%= image_tag "ruby-on-rails.png", alt: "Logo de Ruby On Rails", class: "logo-img" %>
+        <p>Back-end</p>
+      </div>
+      <div class="home-infos-highlight">
+        <%= image_tag "js.png", alt: "Logo de javascript", class: "logo-img" %>
+        <p>Ruby on Rails</p>
+      </div>
+      <div class="home-infos-highlight">
+        <%= image_tag "js.png", alt: "Logo de javascript", class: "logo-img" %>
+        <p>Javascript</p>
+      </div>
+    </div>
+</div>
+<!--   <div class="social-links">
     <a target="_blank" href="https://github.com/prevostjules"><i class="fab fa-github"></i></a>
     <a target="_blank" href="https://www.linkedin.com/in/prevostjules/"><i class="fab fa-linkedin"></i></a>
     <a target="_blank" href="https://twitter.com/prevost_jules"><i class="fab fa-twitter"></i></a>
     <a target="_blank" href="https://www.instagram.com/prevost_jules/"><i class="fab fa-instagram"></i></a>
     <a target="_blank" href="https://www.facebook.com/julesael.prevost"><i class="fab fa-facebook"></i></a>
-  </div>
-  <div class="d-flex">
+  </div> -->
+<!--   <div class="d-flex">
   <%= link_to "Contact", new_contact_path, class: "btn btn-primary m-2" %>
   <%= link_to "Portfolio", projects_path, class: "btn btn-primary m-2" %>
-  </div>
+  </div> -->
 </div>
 
 <div class="missions-big-screen">

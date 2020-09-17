@@ -1,5 +1,12 @@
+.navbar {
+  @include big-screen {
+    height: $navbar-height;
+  }
+  font-weight: 500;
+}
+
 .navbar-light {
-  background-color: $color-tertiary;
+  background-color: $color-background-primary;
 }
 
 .nav-item {
@@ -37,6 +44,7 @@
     .navbar-nav {
       flex-direction: row;
       justify-content: flex-end;
+      align-items: center;
     }
   }
 }
@@ -47,5 +55,20 @@
     .nav-item {
       margin: 0 1rem;
     }
+  }
+}
+
+.nav-social-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include medium-screen {
+    margin: 0 0.5rem;
+  }
+
+  .fab {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
   }
 }

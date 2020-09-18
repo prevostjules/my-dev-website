@@ -1,6 +1,7 @@
 .card {
   border: none;
   margin: 2rem 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
   @include medium-screen {
     max-width: 47%;

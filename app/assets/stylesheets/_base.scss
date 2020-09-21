@@ -23,3 +23,9 @@ h3 {
 .wrapper {
   min-height: calc(100vh - 75px - 60px);
 }
+
+.container-medium {
+  @include medium-screen {
+    max-width: 50%;
+  }
+}

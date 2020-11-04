@@ -38,7 +38,7 @@ gem 'simple_form'
 
 gem 'cloudinary', '~> 1.12.0'
 gem 'postmark-rails'
-gem 'invisible_captcha'
+gem "recaptcha"
 
 
 group :development, :test do  gem 'pry-byebug'
